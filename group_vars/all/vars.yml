@@ -1,0 +1,7 @@
+nginx_port: 80
+flask_port: 5000
+
+deploy_user: deploy
+app_directory: /opt/flask-app
+
+environment: dev

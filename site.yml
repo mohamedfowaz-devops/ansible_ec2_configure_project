@@ -1,0 +1,10 @@
+---
+- name: Configure EC2 web servers
+  hosts: webservers
+  become: true
+
+  roles:
+    - common
+    - docker
+    - flask
+    - nginx

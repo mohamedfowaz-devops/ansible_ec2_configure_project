@@ -1,0 +1,12 @@
+
+# tasks file for roles/flask
+#
+---
+- name: Create Flask config
+  ansible.builtin.template:
+    src: config.yml.j2
+    dest: "{{ app_directory }}/config.yml"
+    owner: "{{ deploy_user }}"
+    group: "{{ deploy_user }}"
+    mode: "0600"
+

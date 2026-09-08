@@ -1,0 +1,26 @@
+
+# tasks file for roles/common
+---
+- name: Install common packages
+  ansible.builtin.apt:
+    name:
+      - curl
+      - git
+      - vim
+      - python3
+    state: present
+    update_cache: true
+
+- name: Create deploy user
+  ansible.builtin.user:
+    name: "{{ deploy_user }}"
+    shell: /bin/bash
+    create_home: true
+
+- name: Create application directory
+  ansible.builtin.file:
+    path: "{{ app_directory }}"
+    state: directory
+    owner: "{{ deploy_user }}"
+    group: "{{ deploy_user }}"
+    mode: "0755"
