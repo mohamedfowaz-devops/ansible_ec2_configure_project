@@ -1,7 +1,9 @@
 # Ansible EC2 Configuration Project
 
 Automated configuration of multiple AWS EC2 instances using Ansible from a centralized control node. Roles prepare the servers, install Docker, render the Flask application configuration and set up Nginx as a reverse proxy, with sensitive values protected by Ansible Vault.
-![Uploading image.png…]()
+
+<img width="996" height="494" alt="image" src="https://github.com/user-attachments/assets/2dfeb6cb-1bff-457c-8f86-ae11afb4f2a3" />
+
 
 
 ## Highlights
